@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Sen:wght@400;600;700;800&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme {
+  --color-background: #f5f2ec;
+  --color-foreground: #272425;
+  --color-ink: #272425;
+  --color-paper: #f5f2ec;
+  --color-green: #1e5938;
+  --color-copper: #c29a77;
+  --color-navy: #38435f;
+  --color-warm: #ebe7df;
+  --color-line: rgba(39, 36, 37, 0.2);
+  --font-sans: 'Raleway', sans-serif;
+  --font-serif: 'Sen', sans-serif;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); }
+  a { color: inherit; text-decoration: none; }
+}
