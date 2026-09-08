@@ -3,8 +3,12 @@
 export const label =
   "text-[10px] font-bold uppercase tracking-[.18em] text-copper";
 
-export const sectionPad =
-  "px-[clamp(24px,10vw,160px)] py-[clamp(78px,10vw,150px)]";
+// Padding vertical das seções (fundo full-bleed fica no <section>).
+export const sectionY = "py-[clamp(78px,10vw,150px)]";
+
+// Container centralizado com largura máxima (conteúdo não estica na tela toda).
+export const container =
+  "mx-auto w-full max-w-[1360px] px-[clamp(24px,5vw,48px)]";
 
 // Cabeçalho de seção: título à esquerda, link/apoio à direita.
 export const heading =

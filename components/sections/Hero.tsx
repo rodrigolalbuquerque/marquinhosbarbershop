@@ -1,4 +1,4 @@
-import { label } from "@/lib/styles";
+import { label, container } from "@/lib/styles";
 import { Button } from "@/components/Button";
 
 export function Hero() {
@@ -13,17 +13,19 @@ export function Hero() {
         alt="Barbeiro cuidando da barba de um cliente em uma barbearia"
       />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,26,18,.82),transparent_28%),linear-gradient(90deg,rgba(13,26,18,.9),rgba(13,26,18,.42)_48%,transparent_85%)]" />
-      <div className="absolute left-[clamp(24px,10vw,155px)] top-[39%] max-md:top-[33%]">
-        <p className={label}>Desde 1992 · Rio de Janeiro</p>
-        <h1 className="my-5.5 font-serif text-[clamp(52px,7.5vw,116px)] font-bold leading-[.88] tracking-[-.06em] max-md:text-[62px]">
-          Barba, cabelo
-          <br />
-          <em className="not-italic text-copper">e chopp gelado.</em>
-        </h1>
-        <p className="my-7.5 text-[15px] leading-[1.6]">
-          Tradição, conversa boa e o cuidado de sempre.
-        </p>
-        <Button href="#agendar">Agendar</Button>
+      <div className={`relative flex h-full items-center ${container}`}>
+        <div>
+          <p className={label}>Desde 1992 · Rio de Janeiro</p>
+          <h1 className="my-5.5 font-serif text-[clamp(52px,7.5vw,116px)] font-bold leading-[.88] tracking-[-.06em] max-md:text-[62px]">
+            Barba, cabelo
+            <br />
+            <em className="not-italic text-copper">e chopp gelado.</em>
+          </h1>
+          <p className="my-7.5 text-[15px] leading-[1.6]">
+            Tradição, conversa boa e o cuidado de sempre.
+          </p>
+          <Button href="#agendar">Agendar</Button>
+        </div>
       </div>
       <span className="absolute bottom-15 right-[10vw] rounded-full border border-copper px-3.25 py-4.5 text-center font-sans text-[8px] font-semibold leading-[1.2] tracking-[.12em] text-copper max-md:bottom-7.5 max-md:right-6">
         DESDE

@@ -1,10 +1,11 @@
 import { services } from "@/lib/content";
-import { label, h2green, sectionPad } from "@/lib/styles";
+import { label, h2green } from "@/lib/styles";
+import { Section } from "@/components/Section";
 import { TextLink } from "@/components/TextLink";
 
 export function Services() {
   return (
-    <section id="servicos" className={"bg-white " + sectionPad}>
+    <Section id="servicos" bg="bg-white">
       <p className={label}>O que fazemos</p>
       <div className="mb-10 mt-11 flex items-end justify-between max-md:flex-col max-md:items-start max-md:gap-5">
         <h2 className={h2green}>
@@ -31,6 +32,6 @@ export function Services() {
           </article>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

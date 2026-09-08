@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Marquinhos Barber Shop — Barba, cabelo e chopp gelado',
   description: 'Marquinhos Barber Shop: uma rede de barbearias no Rio de Janeiro desde 1992.',
   generator: 'v0.app',
+  icons: { icon: '/logo-face.svg' },
 }
 
 export const viewport: Viewport = { colorScheme: 'light', themeColor: '#1e5938' }

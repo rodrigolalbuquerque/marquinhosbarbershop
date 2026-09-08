@@ -1,10 +1,11 @@
 import { inspirations } from "@/lib/content";
-import { label, h2green, heading, sectionPad } from "@/lib/styles";
+import { label, h2green, heading } from "@/lib/styles";
+import { Section } from "@/components/Section";
 import { TextLink } from "@/components/TextLink";
 
 export function Inspiration() {
   return (
-    <section id="ideia" className={"bg-paper " + sectionPad}>
+    <Section id="ideia" bg="bg-paper">
       <p className={label}>Inspiração</p>
       <div className={heading}>
         <h2 className={h2green}>
@@ -28,6 +29,6 @@ export function Inspiration() {
           </figure>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

@@ -1,11 +1,12 @@
 import { units } from "@/lib/content";
-import { label, h2green, sectionPad } from "@/lib/styles";
+import { label, h2green } from "@/lib/styles";
+import { Section } from "@/components/Section";
 import { Arrow } from "@/components/Arrow";
 import { Pin } from "@/components/Pin";
 
 export function Locations() {
   return (
-    <section id="unidades" className={"bg-paper " + sectionPad}>
+    <Section id="unidades" bg="bg-paper">
       <div className="grid grid-cols-2 items-stretch gap-[clamp(40px,6vw,90px)] max-md:grid-cols-1">
         <div className="max-md:order-2">
           <img
@@ -37,6 +38,6 @@ export function Locations() {
           </ul>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

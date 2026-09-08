@@ -1,9 +1,10 @@
-import { label, h2green, heading, sectionPad } from "@/lib/styles";
+import { label, h2green, heading } from "@/lib/styles";
+import { Section } from "@/components/Section";
 import { TextLink } from "@/components/TextLink";
 
 export function Barbers() {
   return (
-    <section id="barbeiros" className={"bg-warm " + sectionPad}>
+    <Section id="barbeiros" bg="bg-warm">
       <p className={label}>Nossos barbeiros</p>
       <div className={heading}>
         <h2 className={h2green}>
@@ -35,6 +36,6 @@ export function Barbers() {
           className="mt-19 h-87.5 w-full border border-copper object-cover filter-[saturate(.7)] max-md:mt-0 max-md:h-70"
         />
       </div>
-    </section>
+    </Section>
   );
 }
