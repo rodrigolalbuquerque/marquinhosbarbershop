@@ -27,7 +27,7 @@ export function SnapStrip({ children, className = "" }: SnapStripProps) {
       </div>
       <p
         aria-hidden="true"
-        className={`mt-3 flex justify-end text-[18px] text-copper transition-opacity duration-500 md:hidden ${
+        className={`mt-3 flex justify-end text-2xl text-copper transition-opacity duration-500 md:hidden ${
           scrolled ? "opacity-0" : "opacity-100"
         }`}
       >
