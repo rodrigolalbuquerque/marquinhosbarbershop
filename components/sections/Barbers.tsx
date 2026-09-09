@@ -3,6 +3,7 @@ import { label, h2green, heading } from "@/lib/styles";
 import { Section } from "@/components/Section";
 import { SnapStrip } from "@/components/SnapStrip";
 import { TextLink } from "@/components/TextLink";
+import { PhotoCaption } from "@/components/PhotoCaption";
 
 const shot =
   "block aspect-4/5 w-full border border-copper object-cover filter-[saturate(.7)] md:aspect-auto md:h-87.5";
@@ -33,19 +34,7 @@ export function Barbers() {
               decoding="async"
               className={shot}
             />
-            {/* Véu de baixo para cima: mantém o nome legível sobre qualquer foto. */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-x-px bottom-px h-2/5 bg-linear-to-t from-black/80 via-black/35 to-transparent"
-            />
-            <figcaption className="absolute inset-x-0 bottom-0 px-4 pb-4 text-white md:px-3.5 md:pb-3.5">
-              <p className="m-0 font-serif text-[19px] font-bold leading-tight tracking-[-.03em] md:text-[17px]">
-                {name}
-              </p>
-              <p className="m-0 mt-1 text-[11px] font-bold uppercase tracking-[.18em] text-copper md:text-[10px]">
-                {unit}
-              </p>
-            </figcaption>
+            <PhotoCaption name={name} sub={unit} />
           </figure>
         ))}
       </SnapStrip>

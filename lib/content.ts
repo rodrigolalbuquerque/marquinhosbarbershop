@@ -37,19 +37,25 @@ export const services: [string, string, string][] = [
   ],
 ];
 
-// [imagem, alt]
-export const inspirations: [string, string][] = [
+// [nome do corte, imagem, alt]
+// PLACEHOLDER: nomes provisórios até definirmos o catálogo real de cortes.
+// ATENÇÃO: a 1ª foto mostra ferramentas, não um corte — trocar quando entrar
+// o banco de imagens real (ver ../planejamento/tarefas.md).
+export const inspirations: [string, string, string][] = [
   [
+    "Clássico texturizado",
     "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1200&q=85",
-    "Corte clássico com textura",
+    "Corte clássico com textura no topo",
   ],
   [
+    "Barba na navalha",
     "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=85",
-    "Acabamento limpo",
+    "Barbeiro fazendo a barba na navalha",
   ],
   [
+    "Degradê navalhado",
     "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1200&q=85",
-    "Barba bem desenhada",
+    "Nuca com degradê e acabamento na navalha",
   ],
 ];
 
@@ -67,25 +73,25 @@ export const units: string[] = [
 // (ver ../context/09-equipe-e-socios.md — tabela ainda "A PREENCHER").
 export const barbers: [string, string, string, string][] = [
   [
-    "Diego Martins",
+    "Caetano Vasques",
     "Nova América",
     "https://images.unsplash.com/photo-1581382575275-97901c2635b7?auto=format&fit=crop&w=900&q=85",
     "Barbeiro sorrindo em seu espaço de trabalho",
   ],
   [
-    "Rafael Lima",
+    "Benício Aragão",
     "Metropolitano",
     "https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&fit=crop&w=900&q=85",
     "Barbeiro trabalhando",
   ],
   [
-    "Bruno Cardoso",
+    "Otávio Bandeira",
     "Norte Shopping",
     "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=85",
     "Barbeiro no salão da unidade",
   ],
   [
-    "Anderson Reis",
+    "Vicente Rezende",
     "Boulevard",
     "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=85",
     "Barbeiro finalizando um corte",

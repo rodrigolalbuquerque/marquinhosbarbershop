@@ -3,6 +3,7 @@ import { label, h2green, heading } from "@/lib/styles";
 import { Section } from "@/components/Section";
 import { SnapStrip } from "@/components/SnapStrip";
 import { TextLink } from "@/components/TextLink";
+import { PhotoCaption } from "@/components/PhotoCaption";
 
 export function Inspiration() {
   return (
@@ -18,10 +19,10 @@ export function Inspiration() {
       </div>
       {/* Vitrine: tira lateral no mobile, grade escalonada no desktop. */}
       <SnapStrip className="md:grid md:grid-cols-[1.15fr_1fr_1fr] md:gap-4.5">
-        {inspirations.map(([src, alt], i) => (
+        {inspirations.map(([name, src, alt], i) => (
           <figure
-            key={src}
-            className={"m-0" + (i === 1 ? " md:mt-13.75" : "")}
+            key={name}
+            className={"relative m-0" + (i === 1 ? " md:mt-13.75" : "")}
           >
             <img
               src={src}
@@ -30,6 +31,7 @@ export function Inspiration() {
               decoding="async"
               className="block aspect-4/5 w-full border border-copper object-cover filter-[saturate(.8)] md:aspect-auto md:h-90"
             />
+            <PhotoCaption name={name} />
           </figure>
         ))}
       </SnapStrip>
