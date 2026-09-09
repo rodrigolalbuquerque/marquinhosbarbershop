@@ -61,3 +61,33 @@ export const units: string[] = [
   "West Shopping",
   "Tijuca",
 ];
+
+// [nome, unidade, imagem, alt]
+// PLACEHOLDER: nomes fictícios até chegarem os dados reais da equipe
+// (ver ../context/09-equipe-e-socios.md — tabela ainda "A PREENCHER").
+export const barbers: [string, string, string, string][] = [
+  [
+    "Diego Martins",
+    "Nova América",
+    "https://images.unsplash.com/photo-1581382575275-97901c2635b7?auto=format&fit=crop&w=900&q=85",
+    "Barbeiro sorrindo em seu espaço de trabalho",
+  ],
+  [
+    "Rafael Lima",
+    "Metropolitano",
+    "https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&fit=crop&w=900&q=85",
+    "Barbeiro trabalhando",
+  ],
+  [
+    "Bruno Cardoso",
+    "Norte Shopping",
+    "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=85",
+    "Barbeiro no salão da unidade",
+  ],
+  [
+    "Anderson Reis",
+    "Boulevard",
+    "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=85",
+    "Barbeiro finalizando um corte",
+  ],
+];

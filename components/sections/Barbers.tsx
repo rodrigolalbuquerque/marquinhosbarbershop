@@ -1,10 +1,14 @@
+import { barbers } from "@/lib/content";
 import { label, h2green, heading } from "@/lib/styles";
 import { Section } from "@/components/Section";
 import { SnapStrip } from "@/components/SnapStrip";
 import { TextLink } from "@/components/TextLink";
 
 const shot =
-  "aspect-4/5 w-full border border-copper object-cover filter-[saturate(.7)] md:aspect-auto md:h-87.5";
+  "block aspect-4/5 w-full border border-copper object-cover filter-[saturate(.7)] md:aspect-auto md:h-87.5";
+
+// Escalonamento da grade no desktop (o mobile é tira lateral, sem offset).
+const offset = ["", "md:mt-10.5", "", "md:mt-19"];
 
 export function Barbers() {
   return (
@@ -20,34 +24,30 @@ export function Barbers() {
       </div>
       {/* Vitrine: tira lateral no mobile, grade escalonada no desktop. */}
       <SnapStrip className="md:grid md:grid-cols-[1.1fr_.85fr_.75fr_.9fr] md:items-start md:gap-3.75">
-        <img
-          src="https://images.unsplash.com/photo-1581382575275-97901c2635b7?auto=format&fit=crop&w=900&q=85"
-          alt="Barbeiro sorrindo em seu espaço de trabalho"
-          loading="lazy"
-          decoding="async"
-          className={shot}
-        />
-        <img
-          src="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&fit=crop&w=900&q=85"
-          alt="Barbeiro trabalhando"
-          loading="lazy"
-          decoding="async"
-          className={`${shot} md:mt-10.5`}
-        />
-        <img
-          src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=85"
-          alt="Interior da barbearia"
-          loading="lazy"
-          decoding="async"
-          className={shot}
-        />
-        <img
-          src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=85"
-          alt="Cliente na cadeira"
-          loading="lazy"
-          decoding="async"
-          className={`${shot} md:mt-19`}
-        />
+        {barbers.map(([name, unit, src, alt], i) => (
+          <figure key={name} className={`relative m-0 ${offset[i] ?? ""}`}>
+            <img
+              src={src}
+              alt={alt}
+              loading="lazy"
+              decoding="async"
+              className={shot}
+            />
+            {/* Véu de baixo para cima: mantém o nome legível sobre qualquer foto. */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-px bottom-px h-2/5 bg-linear-to-t from-black/80 via-black/35 to-transparent"
+            />
+            <figcaption className="absolute inset-x-0 bottom-0 px-4 pb-4 text-white md:px-3.5 md:pb-3.5">
+              <p className="m-0 font-serif text-[19px] font-bold leading-tight tracking-[-.03em] md:text-[17px]">
+                {name}
+              </p>
+              <p className="m-0 mt-1 text-[11px] font-bold uppercase tracking-[.18em] text-copper md:text-[10px]">
+                {unit}
+              </p>
+            </figcaption>
+          </figure>
+        ))}
       </SnapStrip>
     </Section>
   );
