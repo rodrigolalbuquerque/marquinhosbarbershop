@@ -8,7 +8,7 @@ export const services: [string, string, string][] = [
   [
     "Corte",
     "Tesoura, máquina e acabamento preciso.",
-    "https://images.unsplash.com/photo-1593702295094-aea3cbb97929?auto=format&fit=crop&w=1000&q=85",
+    "https://images.unsplash.com/photo-1647140655214-e4a2d914971f?auto=format&fit=crop&w=1000&q=85",
   ],
   [
     "Barba",
@@ -38,24 +38,22 @@ export const services: [string, string, string][] = [
 ];
 
 // [nome do corte, imagem, alt]
-// PLACEHOLDER: nomes provisórios até definirmos o catálogo real de cortes.
-// ATENÇÃO: a 1ª foto mostra ferramentas, não um corte — trocar quando entrar
-// o banco de imagens real (ver ../planejamento/tarefas.md).
+// PLACEHOLDER: fotos e nomes provisórios (originais em ../placeholder/inspiração/).
 export const inspirations: [string, string, string][] = [
   [
     "Clássico texturizado",
-    "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1200&q=85",
-    "Corte clássico com textura no topo",
+    "/inspiracao/classico-texturizado.jpg",
+    "Homem de perfil com corte texturizado no topo e degradê nas laterais",
   ],
   [
     "Barba na navalha",
-    "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=85",
-    "Barbeiro fazendo a barba na navalha",
+    "/inspiracao/barba-na-navalha.jpg",
+    "Homem de perfil com barba cheia e contorno feito na navalha",
   ],
   [
     "Degradê navalhado",
-    "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1200&q=85",
-    "Nuca com degradê e acabamento na navalha",
+    "/inspiracao/degrade-navalhado.jpg",
+    "Homem de perfil com degradê navalhado e barba alinhada",
   ],
 ];
 

@@ -18,7 +18,7 @@ export function Inspiration() {
         <TextLink href="#ideia">Veja algumas opções</TextLink>
       </div>
       {/* Vitrine: tira lateral no mobile, grade escalonada no desktop. */}
-      <SnapStrip className="md:grid md:grid-cols-[1.15fr_1fr_1fr] md:gap-4.5">
+      <SnapStrip className="md:grid md:grid-cols-[1.15fr_1fr_1fr] md:items-start md:gap-4.5">
         {inspirations.map(([name, src, alt], i) => (
           <figure
             key={name}
@@ -29,7 +29,7 @@ export function Inspiration() {
               alt={alt}
               loading="lazy"
               decoding="async"
-              className="block aspect-4/5 w-full border border-copper object-cover filter-[saturate(.8)] md:aspect-auto md:h-90"
+              className="block aspect-4/5 w-full border border-copper object-cover object-[56%_50%] filter-[saturate(.8)] md:aspect-auto md:h-90 md:object-[68%_50%]"
             />
             <PhotoCaption name={name} />
           </figure>
