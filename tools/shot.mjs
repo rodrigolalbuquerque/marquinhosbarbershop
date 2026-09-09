@@ -30,7 +30,20 @@ if (!ok) {
   process.exit(1)
 }
 
-await page.waitForTimeout(3000) // deixa fontes e imagens (Unsplash) assentarem
+// Rola a página inteira para disparar as imagens com loading="lazy", depois volta ao topo.
+await page.evaluate(async () => {
+  const step = window.innerHeight
+  for (let y = 0; y < document.body.scrollHeight; y += step) {
+    window.scrollTo(0, y)
+    await new Promise((r) => setTimeout(r, 120))
+  }
+  window.scrollTo(0, 0)
+})
+// Espera todas as imagens terminarem (evita capturar quadro vazio de lazy image).
+await page
+  .waitForFunction(() => [...document.images].every((i) => i.complete), null, { timeout: 20000 })
+  .catch(() => {})
+await page.waitForTimeout(1200) // respiro para fontes/decode
 // 5º arg "header" captura só o topo (viewport recortado) em alta resolução.
 if (process.argv[5] === 'header') {
   await page.screenshot({ path: out, clip: { x: 0, y: 0, width, height: 140 } })

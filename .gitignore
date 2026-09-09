@@ -15,3 +15,6 @@ node_modules
 .DS_Store
 # Debug screenshots (Playwright)
 screenshots/
+
+# TypeScript incremental build cache
+*.tsbuildinfo

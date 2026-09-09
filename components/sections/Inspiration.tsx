@@ -1,6 +1,7 @@
 import { inspirations } from "@/lib/content";
 import { label, h2green, heading } from "@/lib/styles";
 import { Section } from "@/components/Section";
+import { SnapStrip } from "@/components/SnapStrip";
 import { TextLink } from "@/components/TextLink";
 
 export function Inspiration() {
@@ -15,20 +16,23 @@ export function Inspiration() {
         </h2>
         <TextLink href="#ideia">Veja algumas opções</TextLink>
       </div>
-      <div className="grid grid-cols-[1.15fr_1fr_1fr] gap-4.5 max-md:grid-cols-1">
+      {/* Vitrine: tira lateral no mobile, grade escalonada no desktop. */}
+      <SnapStrip className="md:grid md:grid-cols-[1.15fr_1fr_1fr] md:gap-4.5">
         {inspirations.map(([src, alt], i) => (
           <figure
             key={src}
-            className={"m-0" + (i === 1 ? " mt-13.75 max-md:mt-0" : "")}
+            className={"m-0" + (i === 1 ? " md:mt-13.75" : "")}
           >
             <img
               src={src}
               alt={alt}
-              className="block h-90 w-full border border-copper object-cover filter-[saturate(.8)] max-md:h-70"
+              loading="lazy"
+              decoding="async"
+              className="block aspect-4/5 w-full border border-copper object-cover filter-[saturate(.8)] md:aspect-auto md:h-90"
             />
           </figure>
         ))}
-      </div>
+      </SnapStrip>
     </Section>
   );
 }
