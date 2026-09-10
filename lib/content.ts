@@ -67,7 +67,9 @@ export const units: string[] = [
 ];
 
 // [nome, unidade, imagem, alt]
-// PLACEHOLDER: nomes fictícios até chegarem os dados reais da equipe
+// PLACEHOLDER: lista fixa provisória. Por decisão D-032 estes rostos devem ser
+// escolhidos automaticamente dentre os barbeiros ativos e publicados, quando a
+// camada de dados existir. Nomes fictícios até chegarem os dados reais da equipe
 // (ver ../context/09-equipe-e-socios.md — tabela ainda "A PREENCHER").
 export const barbers: [string, string, string, string][] = [
   [
