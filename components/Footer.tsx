@@ -26,7 +26,7 @@ export function Footer() {
             </span>
           </div>
           <p className="mt-5 text-[13px] leading-[1.8] md:text-[11px]">
-            Barba, cabelo e chopp gelado.
+            Barba, cabelo e cuidado completo.
             <br />
             Rio de Janeiro, RJ.
           </p>

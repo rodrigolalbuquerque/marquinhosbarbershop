@@ -25,27 +25,21 @@ export function Hero() {
 
       <div className={`relative w-full pb-12 md:pb-0 ${container}`}>
         <div>
+          {/* Único lugar do hero onde a fundação aparece (D-034). */}
           <p className={label}>Desde 1992 · Rio de Janeiro</p>
           <h1 className="my-4 font-serif text-[clamp(44px,8vw,116px)] font-bold leading-[.9] tracking-[-.06em] md:my-5.5 md:leading-[.88]">
             Barba, cabelo
             <br />
-            <em className="not-italic text-copper">e chopp gelado.</em>
+            <em className="not-italic text-copper">e cuidado completo.</em>
           </h1>
           <p className="mb-7 max-w-[46ch] text-[16px] leading-[1.6] md:my-7.5 md:text-[15px]">
-            Tradição, conversa boa e o cuidado de sempre.
+            Tradição, técnica e serviços pensados para você.
           </p>
           <Button href="#agendar" full>
             Agendar
           </Button>
         </div>
       </div>
-
-      {/* Selo grande é decoração de desktop — no mobile o "Desde 1992" vive no rótulo. */}
-      <span className="absolute bottom-15 right-[10vw] hidden rounded-full border border-copper px-3.25 py-4.5 text-center font-sans text-[8px] font-semibold leading-[1.2] tracking-[.12em] text-copper md:block">
-        DESDE
-        <br />
-        <strong className="font-serif text-[22px] tracking-normal">1992</strong>
-      </span>
     </section>
   );
 }

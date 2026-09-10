@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Marquinhos Barber Shop — Barba, cabelo e chopp gelado',
+  title: 'Marquinhos Barber Shop — Barba, cabelo e cuidado completo',
   description: 'Marquinhos Barber Shop: uma rede de barbearias no Rio de Janeiro desde 1992.',
   generator: 'v0.app',
   icons: { icon: '/logo-face.svg' },
