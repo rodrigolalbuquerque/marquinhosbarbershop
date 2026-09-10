@@ -15,17 +15,17 @@ export function Inspiration() {
           <br />
           <span className="text-copper">de corte?</span>
         </h2>
-        <TextLink href="#ideia">Veja algumas opções</TextLink>
+        <TextLink href="/estilos">Veja algumas opções</TextLink>
       </div>
       {/* Vitrine: tira lateral no mobile, grade escalonada no desktop. */}
       <SnapStrip className="md:grid md:grid-cols-[1.15fr_1fr_1fr] md:items-start md:gap-4.5">
-        {inspirations.map(([name, src, alt], i) => (
+        {inspirations.map(({ name, image, alt }, i) => (
           <figure
             key={name}
             className={"relative m-0" + (i === 1 ? " md:mt-13.75" : "")}
           >
             <img
-              src={src}
+              src={image}
               alt={alt}
               loading="lazy"
               decoding="async"

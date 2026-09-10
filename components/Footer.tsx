@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { logoFace, units } from "@/lib/content";
 import { label, container } from "@/lib/styles";
 import { Arrow } from "@/components/Arrow";
@@ -46,9 +47,9 @@ export function Footer() {
           <ul className="m-0 list-none p-0 pb-3 md:pb-0">
             {units.map((unit) => (
               <li key={unit}>
-                <a href="#unidades" className={footerLink}>
+                <Link href="/#unidades" className={footerLink}>
                   {unit}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -56,9 +57,9 @@ export function Footer() {
 
         <div className="border-t border-white/15 pt-4 md:border-0 md:pt-0">
           <p className={label}>História</p>
-          <a href="#sobre" className={footerLink}>
+          <Link href="/sobre" className={footerLink}>
             Nossa história <Arrow />
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

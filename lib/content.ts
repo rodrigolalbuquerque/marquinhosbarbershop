@@ -37,24 +37,39 @@ export const services: [string, string, string][] = [
   ],
 ];
 
-// [nome do corte, imagem, alt]
+// Catálogo de cortes — universal, não "cortes da casa" (D-030).
 // PLACEHOLDER: fotos e nomes provisórios (originais em ../placeholder/inspiração/).
-export const inspirations: [string, string, string][] = [
-  [
-    "Clássico texturizado",
-    "/inspiracao/classico-texturizado.jpg",
-    "Homem de perfil com corte texturizado no topo e degradê nas laterais",
-  ],
-  [
-    "Barba na navalha",
-    "/inspiracao/barba-na-navalha.jpg",
-    "Homem de perfil com barba cheia e contorno feito na navalha",
-  ],
-  [
-    "Degradê navalhado",
-    "/inspiracao/degrade-navalhado.jpg",
-    "Homem de perfil com degradê navalhado e barba alinhada",
-  ],
+// Vira objeto porque a página /estilos precisa de descrição além do nome.
+export type Style = {
+  name: string;
+  image: string;
+  alt: string;
+  /** Uma linha: o que define o corte, em linguagem de cliente. */
+  description: string;
+};
+
+export const inspirations: Style[] = [
+  {
+    name: "Clássico texturizado",
+    image: "/inspiracao/classico-texturizado.jpg",
+    alt: "Homem de perfil com corte texturizado no topo e degradê nas laterais",
+    description:
+      "Volume e movimento no topo, laterais baixas. Discreto o bastante para o trabalho.",
+  },
+  {
+    name: "Barba na navalha",
+    image: "/inspiracao/barba-na-navalha.jpg",
+    alt: "Homem de perfil com barba cheia e contorno feito na navalha",
+    description:
+      "Barba cheia com contorno desenhado na navalha. Pede manutenção a cada duas semanas.",
+  },
+  {
+    name: "Degradê navalhado",
+    image: "/inspiracao/degrade-navalhado.jpg",
+    alt: "Homem de perfil com degradê navalhado e barba alinhada",
+    description:
+      "Transição da pele ao cabelo sem degrau. É o corte que mais depende da mão do barbeiro.",
+  },
 ];
 
 export const units: string[] = [

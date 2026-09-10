@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { logoFace, logoText } from "@/lib/content";
 import { container } from "@/lib/styles";
 import { Arrow } from "@/components/Arrow";
@@ -25,8 +26,8 @@ export function Header() {
       <div
         className={`${container} flex h-19 items-center justify-between md:h-24`}
       >
-        <a
-          href="#inicio"
+        <Link
+          href="/"
           onClick={close}
           className="relative z-50 flex items-center gap-2.5"
           aria-label="Marquinhos Barber Shop, início"
@@ -41,7 +42,7 @@ export function Header() {
             alt="Marquinhos Barber Shop"
             className="h-6 w-auto object-contain md:h-9"
           />
-        </a>
+        </Link>
 
         <div className="flex items-center gap-3 md:gap-[clamp(18px,2.8vw,40px)]">
           {/* Mobile: menu em tela cheia. Desktop: nav inline. */}
@@ -52,31 +53,31 @@ export function Header() {
               (menuOpen ? "max-md:flex" : "max-md:hidden")
             }
           >
-            <a href="#servicos" onClick={close} className={navLink}>
+            <Link href="/#servicos" onClick={close} className={navLink}>
               Serviços e preços
-            </a>
-            <a href="#barbeiros" onClick={close} className={navLink}>
+            </Link>
+            <Link href="/#barbeiros" onClick={close} className={navLink}>
               Barbeiros
-            </a>
-            <a href="#unidades" onClick={close} className={navLink}>
+            </Link>
+            <Link href="/#unidades" onClick={close} className={navLink}>
               Unidades
-            </a>
-            <a href="#sobre" onClick={close} className={navLink}>
+            </Link>
+            <Link href="/sobre" onClick={close} className={navLink}>
               Sobre
-            </a>
-            <a href="#agendar" onClick={close} className={navLink}>
+            </Link>
+            <Link href="/#agendar" onClick={close} className={navLink}>
               Já sou cliente
-            </a>
+            </Link>
           </nav>
 
           {/* Agendar fica SEMPRE visível — nunca entra na gaveta. */}
-          <a
-            href="#agendar"
+          <Link
+            href="/#agendar"
             onClick={close}
             className="relative z-50 flex min-h-11 items-center border border-copper px-4 py-3 text-[12px] font-bold uppercase tracking-[.06em] text-copper transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper active:bg-copper active:text-white"
           >
             Agendar <Arrow />
-          </a>
+          </Link>
 
           {/* Hambúrguer que vira X quando o menu abre. */}
           <button

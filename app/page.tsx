@@ -1,5 +1,3 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { Barbers } from "@/components/sections/Barbers";
@@ -10,8 +8,7 @@ import { BookingCTA } from "@/components/sections/BookingCTA";
 
 export default function Page() {
   return (
-    <main className="overflow-hidden">
-      <Header />
+    <>
       <Hero />
       <Services />
       <Barbers />
@@ -19,7 +16,6 @@ export default function Page() {
       <Club />
       <Locations />
       <BookingCTA />
-      <Footer />
-    </main>
+    </>
   );
 }
