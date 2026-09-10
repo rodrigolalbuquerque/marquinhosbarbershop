@@ -36,14 +36,13 @@ export default function Page() {
       <Section bg="bg-paper">
         <div className="grid gap-x-[clamp(40px,6vw,90px)] gap-y-6 md:grid-cols-[1fr_1.15fr]">
           <h2 className={h2green}>
-            Cinco lojas
+            Escolha por onde
             <br />
-            <span className="text-copper">no Rio.</span>
+            <span className="text-copper">você anda.</span>
           </h2>
           <p className={`${body} m-0 max-w-[62ch] self-end text-ink`}>
-            Todas dentro de shopping, com estacionamento e o mesmo padrão de
-            corte e atendimento. Fale direto com a loja pelo WhatsApp para
-            marcar seu horário.
+            Em shopping, com estacionamento fácil e o mesmo padrão de trabalho.
+            Fale direto com a loja pelo WhatsApp para marcar seu horário.
           </p>
         </div>
 

@@ -29,15 +29,15 @@ const paragraphs = [
 const pillars: [string, string][] = [
   [
     "Técnica antes de tudo",
-    "Atendimento bom abre a porta, técnica é o que faz voltar. Foi essa a lição que virou o jogo, e é ela que orienta quem senta na nossa cadeira.",
+    "Atendimento bom abre a porta, técnica é o que faz voltar. Foi a lição que virou o jogo, e é a que o Marquinhos passa adiante para cada barbeiro da rede.",
   ],
   [
-    "Barber shop, não salão",
-    "A experiência é de barbearia: ambiente, ritmo e serviço pensados para homem. Fomos uma das primeiras da Ilha a trabalhar assim.",
+    "Barbearia de verdade",
+    "Toalha quente, navalha e acabamento conferido no espelho. O serviço completo, não só o corte.",
   ],
   [
-    "Seis unidades, um padrão",
-    "Cada loja tem seu time e sua rotina, mas o corte, a barba e o jeito de receber seguem o mesmo padrão em todas.",
+    "Mesmo padrão, qualquer loja",
+    "Cada loja tem seu time e sua lista de serviços. O padrão do trabalho é o mesmo em todas.",
   ],
 ];
 
@@ -53,7 +53,7 @@ export default function Page() {
       />
 
       <Section bg="bg-paper">
-        <div className="grid gap-x-[clamp(40px,6vw,90px)] gap-y-8 md:grid-cols-[1fr_1.15fr]">
+        <div className="grid gap-x-[clamp(40px,6vw,90px)] gap-y-8 md:grid-cols-[1fr_1.15fr] md:items-center">
           <h2 className={h2green}>
             Uma vida
             <br />
@@ -70,8 +70,8 @@ export default function Page() {
       </Section>
 
       <Section bg="bg-warm">
-        <p className={label}>O que sustenta a casa</p>
-        <div className="mt-8 grid gap-x-8 gap-y-9 md:mt-12 md:grid-cols-3">
+        <p className={label}>O que não muda</p>
+        <div className="mt-8 grid gap-x-[clamp(40px,6vw,90px)] gap-y-9 md:mt-12 md:grid-cols-3">
           {pillars.map(([title, text]) => (
             <article key={title} className="border-t border-line pt-5">
               <h3 className="mb-2 mt-0 font-serif text-[22px] font-bold leading-tight tracking-[-.03em] text-green md:text-[26px]">
