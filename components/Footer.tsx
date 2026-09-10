@@ -46,9 +46,9 @@ export function Footer() {
           </summary>
           <ul className="m-0 list-none p-0 pb-3 md:pb-0">
             {units.map((unit) => (
-              <li key={unit}>
-                <Link href="/#unidades" className={footerLink}>
-                  {unit}
+              <li key={unit.slug}>
+                <Link href="/unidades" className={footerLink}>
+                  {unit.name}
                 </Link>
               </li>
             ))}

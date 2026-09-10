@@ -72,14 +72,81 @@ export const inspirations: Style[] = [
   },
 ];
 
-export const units: string[] = [
-  "Boulevard",
-  "Nova América",
-  "Norte Shopping",
-  "Metropolitano",
-  "West Shopping",
-  "Tijuca",
+// Unidades — dados reais de ../context/02-unidades.md (2026-09-10).
+// DDD 21 assumido: o dono passou os números com 8 dígitos. Conferir antes de publicar.
+// Horários e a unidade Tijuca ainda estão "A PREENCHER" no context.
+export type Unit = {
+  name: string;
+  slug: string;
+  /** Bairro — é o que a pessoa reconhece ao procurar "perto de mim". */
+  district: string;
+  street: string;
+  cep: string;
+  /** Só dígitos, com país e DDD: formato do link wa.me. */
+  whatsapp: string;
+  /** Rótulo do WhatsApp para leitura humana. */
+  whatsappLabel: string;
+  /** "trinks" pode virar agendamento online; "cash" fica no WhatsApp (D-021). */
+  system: "trinks" | "cash";
+};
+
+export const units: Unit[] = [
+  {
+    name: "Boulevard",
+    slug: "boulevard",
+    district: "Vila Isabel",
+    street: "R. Barão de São Francisco, 236",
+    cep: "20560-030",
+    whatsapp: "552134007232",
+    whatsappLabel: "(21) 3400-7232",
+    system: "cash",
+  },
+  {
+    name: "Nova América",
+    slug: "nova-america",
+    district: "Del Castilho",
+    street: "Av. Pastor Martin Luther King Jr., 126",
+    cep: "20754-971",
+    whatsapp: "552123033370",
+    whatsappLabel: "(21) 2303-3370",
+    system: "trinks",
+  },
+  {
+    name: "Norte Shopping",
+    slug: "norte-shopping",
+    district: "Cachambi",
+    street: "Av. Dom Hélder Câmara, 5474 — Loja 825",
+    cep: "20771-004",
+    whatsapp: "552120182543",
+    whatsappLabel: "(21) 2018-2543",
+    system: "cash",
+  },
+  {
+    name: "Metropolitano",
+    slug: "metropolitano",
+    district: "Barra da Tijuca",
+    street: "Av. Embaixador Abelardo Bueno, 1300",
+    cep: "22775-023",
+    whatsapp: "552130959200",
+    whatsappLabel: "(21) 3095-9200",
+    system: "trinks",
+  },
+  {
+    name: "West Shopping",
+    slug: "west-shopping",
+    district: "Campo Grande",
+    street: "Estr. do Mendanha, 555 — Loja 201 C",
+    cep: "23087-959",
+    whatsapp: "552134379920",
+    whatsappLabel: "(21) 3437-9920",
+    system: "cash",
+  },
 ];
+
+/** Link de conversa já com a mensagem pronta. */
+export function whatsappLink(unit: Unit, message: string): string {
+  return `https://wa.me/${unit.whatsapp}?text=${encodeURIComponent(message)}`;
+}
 
 // [nome, unidade, imagem, alt]
 // PLACEHOLDER: lista fixa provisória. Por decisão D-032 estes rostos devem ser

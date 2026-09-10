@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { units } from "@/lib/content";
 import { label, h2green } from "@/lib/styles";
 import { Section } from "@/components/Section";
@@ -26,16 +27,21 @@ export function Locations() {
           </h2>
           {/* Linhas altas: alvo de toque confortável (≥56px). */}
           <ul className="m-0 mt-7 list-none p-0 md:mt-10">
-            {units.map((item) => (
-              <li key={item} className="border-t border-line last:border-b">
-                <a
-                  href="#agendar"
+            {units.map((unit) => (
+              <li key={unit.slug} className="border-t border-line last:border-b">
+                <Link
+                  href="/unidades"
                   className="flex min-h-14 items-center gap-3.5 px-1.5 py-4 font-sans text-[16px] font-semibold text-ink transition-colors hover:text-green active:text-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper [&>[aria-hidden]]:text-copper"
                 >
                   <Pin />
-                  <span className="flex-1">{item}</span>
+                  <span className="flex-1">
+                    {unit.name}
+                    <span className="ml-2 font-normal text-ink/60">
+                      {unit.district}
+                    </span>
+                  </span>
                   <Arrow />
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
