@@ -59,7 +59,7 @@ export function Header() {
             <Link href="/#barbeiros" onClick={close} className={navLink}>
               Barbeiros
             </Link>
-            <Link href="/#unidades" onClick={close} className={navLink}>
+            <Link href="/unidades" onClick={close} className={navLink}>
               Unidades
             </Link>
             <Link href="/sobre" onClick={close} className={navLink}>
