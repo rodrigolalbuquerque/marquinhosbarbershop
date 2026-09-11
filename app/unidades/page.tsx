@@ -42,7 +42,7 @@ export default function Page() {
           <span className="text-copper">onde for melhor para{" "}você.</span>
         </h2>
         <p className={`${body} mt-7 mb-0 max-w-[62ch] text-ink md:mt-9`}>
-          Fale direto com a equipe da unidade para marcar seu horário.
+          Escolha a unidade e marque seu horário.
         </p>
 
         <ul className="mt-14 grid list-none gap-x-4.5 gap-y-9 p-0 md:mt-20 md:grid-cols-2">
