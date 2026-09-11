@@ -37,9 +37,9 @@ export default function Page() {
         {/* Título ocupa a largura toda: em duas colunas ele quebrava em cinco
             linhas, porque a frase é bem mais longa que a das outras páginas. */}
         <h2 className={h2green}>
-          Tem sempre uma Marquinhos
+          O mesmo cuidado,
           <br />
-          <span className="text-copper">no seu caminho.</span>
+          <span className="text-copper">onde for melhor para{" "}você.</span>
         </h2>
         <p className={`${body} mt-7 mb-0 max-w-[62ch] text-ink md:mt-9`}>
           Encontre a unidade mais conveniente para você e fale direto com a
