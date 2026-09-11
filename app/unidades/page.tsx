@@ -72,7 +72,7 @@ export default function Page() {
                 <a
                   href={whatsappLink(
                     unit,
-                    `Olá! Gostaria de marcar um horário na unidade ${unit.name}.`,
+                    `Olá! Gostaria de marcar um horário na unidade do ${unit.name}.`,
                   )}
                   target="_blank"
                   rel="noopener noreferrer"

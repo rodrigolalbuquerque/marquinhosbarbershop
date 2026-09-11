@@ -92,7 +92,7 @@ export type Unit = {
 
 export const units: Unit[] = [
   {
-    name: "Boulevard",
+    name: "Shopping Boulevard",
     slug: "boulevard",
     district: "Vila Isabel",
     street: "R. Barão de São Francisco, 236",
@@ -102,7 +102,7 @@ export const units: Unit[] = [
     system: "cash",
   },
   {
-    name: "Nova América",
+    name: "Shopping Nova América",
     slug: "nova-america",
     district: "Del Castilho",
     street: "Av. Pastor Martin Luther King Jr., 126",
@@ -122,7 +122,7 @@ export const units: Unit[] = [
     system: "cash",
   },
   {
-    name: "Metropolitano",
+    name: "Shopping Metropolitano",
     slug: "metropolitano",
     district: "Barra da Tijuca",
     street: "Av. Embaixador Abelardo Bueno, 1300",
@@ -156,13 +156,13 @@ export function whatsappLink(unit: Unit, message: string): string {
 export const barbers: [string, string, string, string][] = [
   [
     "Caetano Vasques",
-    "Nova América",
+    "Shopping Nova América",
     "https://images.unsplash.com/photo-1581382575275-97901c2635b7?auto=format&fit=crop&w=900&q=85",
     "Barbeiro sorrindo em seu espaço de trabalho",
   ],
   [
     "Benício Aragão",
-    "Metropolitano",
+    "Shopping Metropolitano",
     "https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&fit=crop&w=900&q=85",
     "Barbeiro trabalhando",
   ],
@@ -174,7 +174,7 @@ export const barbers: [string, string, string, string][] = [
   ],
   [
     "Vicente Rezende",
-    "Boulevard",
+    "Shopping Boulevard",
     "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=85",
     "Barbeiro finalizando um corte",
   ],

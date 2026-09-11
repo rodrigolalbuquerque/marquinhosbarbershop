@@ -36,7 +36,9 @@ export function Locations() {
                   <Pin />
                   <span className="flex-1">
                     {unit.name}
-                    <span className="ml-2 font-normal text-ink/60">
+                    {/* Mobile: bairro em linha própria, para nome longo não partir
+                        o bairro ao meio ("Barra da / Tijuca"). Desktop: na mesma linha. */}
+                    <span className="block whitespace-nowrap text-[14px] font-normal text-ink/60 md:ml-2 md:inline md:text-[16px]">
                       {unit.district}
                     </span>
                   </span>
