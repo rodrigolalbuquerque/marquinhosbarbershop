@@ -4,7 +4,7 @@ import { Section } from "@/components/Section";
 import { PageHero } from "@/components/PageHero";
 import { Pin } from "@/components/Pin";
 import { Arrow } from "@/components/Arrow";
-import { body, label } from "@/lib/styles";
+import { body, h2green, label } from "@/lib/styles";
 
 export const metadata: Metadata = {
   title: "Unidades",
@@ -27,19 +27,26 @@ export default function Page() {
     <>
       <PageHero
         eyebrow="Onde estamos"
-        title="Tem sempre uma Marquinhos"
-        accent="no seu caminho."
+        title="Encontre a Marquinhos"
+        accent="perto de você."
         image={heroImage}
         alt="Interior de uma unidade da Marquinhos Barber Shop"
       />
 
       <Section bg="bg-paper">
-        <p className={`${body} m-0 max-w-[62ch] text-ink`}>
+        {/* Título ocupa a largura toda: em duas colunas ele quebrava em cinco
+            linhas, porque a frase é bem mais longa que a das outras páginas. */}
+        <h2 className={h2green}>
+          Tem sempre uma Marquinhos
+          <br />
+          <span className="text-copper">no seu caminho.</span>
+        </h2>
+        <p className={`${body} mt-7 mb-0 max-w-[62ch] text-ink md:mt-9`}>
           Encontre a unidade mais conveniente para você e fale direto com a
           equipe para marcar seu horário.
         </p>
 
-        <ul className="mt-12 grid list-none gap-x-4.5 gap-y-9 p-0 md:mt-16 md:grid-cols-2">
+        <ul className="mt-14 grid list-none gap-x-4.5 gap-y-9 p-0 md:mt-20 md:grid-cols-2">
           {units.map((unit) => (
             <li
               key={unit.slug}
