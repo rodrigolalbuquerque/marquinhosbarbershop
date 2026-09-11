@@ -29,7 +29,7 @@ const paragraphs = [
 const pillars: [string, string][] = [
   [
     "Técnica antes de tudo",
-    "Atendimento bom abre a porta, técnica é o que faz voltar. Foi a lição que virou o jogo, e é a que o Marquinhos passa adiante para cada barbeiro da rede.",
+    "Atendimento bom abre a porta, técnica é o que faz voltar. Foi a lição que virou o jogo, e que o Marquinhos passa adiante para cada barbeiro da rede.",
   ],
   [
     "Barbearia de verdade",
@@ -37,7 +37,7 @@ const pillars: [string, string][] = [
   ],
   [
     "Mesmo padrão, qualquer loja",
-    "Cada loja tem seu time e sua lista de serviços. O padrão do trabalho é o mesmo em todas.",
+    "Cada unidade tem suas particularidades, mas o padrão do trabalho é o mesmo em todas.",
   ],
 ];
 
